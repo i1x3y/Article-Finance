@@ -1,0 +1,8 @@
+\begin{table}[!ht]\centering\small\caption{Relative RMSE by sub-period (60-month evaluation window)}\label{tab:sub}
+\begin{tabular}{l rrrrrrrrrr}\toprule
+Sub-period & RW RMSE & ARIMA(2,1,2) & Ridge & Random forest & GBM & XGBoost & ARIMA--XGBoost & GRU & LSTM & N-BEATS\\\midrule
+2020:M9--2021:M12 & 3.79 & 0.95 & 0.96 & 0.79 & \textbf{0.75} & 0.92 & 0.75 & 0.95 & 0.95 & 1.00\\
+2022:M1--2023:M6 & 7.12 & 0.81 & \textbf{0.72} & 0.81 & 0.83 & 0.74 & 0.90 & 1.02 & 1.04 & 1.10\\
+2023:M7--2024:M5 & 4.97 & 0.86 & 0.78 & \textbf{0.51} & 0.55 & 0.51 & 0.57 & 0.65 & 0.77 & 0.89\\
+2024:M6--2025:M8 & 4.07 & 0.80 & 0.71 & 0.64 & \textbf{0.54} & 0.57 & 0.62 & 0.83 & 0.72 & 1.19\\
+\bottomrule\end{tabular}\end{table}

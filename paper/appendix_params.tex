@@ -1,0 +1,13 @@
+\section{Selected hyperparameters}\label{app:params}
+\begin{table}[!ht]\centering\scriptsize\caption{Hyperparameters selected at each re-tuning date}\label{tab:params}
+\resizebox{\textwidth}{!}{\begin{tabular}{lccccc}\toprule
+Re-tuning date & 2020:M09 & 2021:M09 & 2022:M09 & 2023:M09 & 2024:M09\\
+Used in windows & 60 & 60 & 36, 60 & 36, 60 & 12, 36, 60\\\midrule
+Ridge & $\alpha=1$ & $\alpha=100$ & $\alpha=1$ & $\alpha=1$ & $\alpha=10$\\
+SVR & $C=10$, $\epsilon=0.01$ & $C=10$, $\epsilon=0.01$ & $C=10$, $\epsilon=0.1$ & $C=10$, $\epsilon=0.01$ & $C=1$, $\epsilon=0.01$\\
+Random forest & leaf 1, feat.\ 0.3 & leaf 1, feat.\ 1.0 & leaf 1, feat.\ 1.0 & leaf 1, feat.\ 0.3 & leaf 3, feat.\ 0.3\\
+GBM & d 3, lr 0.1, ss 0.8 & d 3, lr 0.1, ss 0.8 & d 3, lr 0.1, ss 0.8 & d 2, lr 0.1, ss 0.8 & d 3, lr 0.1, ss 0.8\\
+XGBoost & d 2, lr 0.1, ss 1.0 & d 2, lr 0.05, ss 0.8 & d 5, lr 0.1, ss 0.8 & d 5, lr 0.1, ss 1.0 & d 3, lr 0.1, ss 1.0\\
+\bottomrule\end{tabular}}
+\begin{minipage}{0.95\linewidth}\footnotesize\vspace{2pt} Notes: Hyperparameters are selected from the grids in Table~\ref{tab:grid} by minimising MSE on the last 12 observations of the training sample available at each re-tuning date, and are kept fixed for the following 12 months. leaf: minimum leaf size; feat.: share of features considered at each split; d: maximum tree depth; lr: learning rate; ss: subsample share. Random forest uses 300 trees; GBM and XGBoost use 200 trees.\end{minipage}
+\end{table}

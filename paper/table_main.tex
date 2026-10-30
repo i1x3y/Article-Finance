@@ -1,0 +1,29 @@
+\begin{table}[!ht]\centering\small
+\caption{Out-of-sample accuracy relative to the random walk}\label{tab:main}
+\begin{tabular}{l rrr rrr}\toprule
+ & \multicolumn{3}{c}{Relative RMSE} & \multicolumn{3}{c}{RMSE (pp)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Model & 12 m & 36 m & 60 m & 12 m & 36 m & 60 m\\\midrule
+\multicolumn{7}{l}{\textit{Benchmarks}}\\
+\quad Random walk & \underline{1.000} & \underline{1.000} & \underline{1.000} & 1.85 & 5.47 & 5.26\\
+\quad AR($p$) & \underline{1.437} & \underline{1.123} & \underline{1.008} & 2.66 & 6.15 & 5.31\\
+\multicolumn{7}{l}{\textit{Econometric}}\\
+\quad ARIMA(2,1,2) & \textbf{\underline{0.794$^{*}$}} & \underline{0.883$^{*}$} & \underline{0.839$^{**}$} & 1.47 & 4.83 & 4.42\\
+\quad Holt (damped) & \underline{1.015} & \underline{0.947} & \underline{0.889$^{*}$} & 1.88 & 5.18 & 4.68\\
+\quad VAR & \underline{1.814$^{**}$} & \underline{1.320$^{*}$} & \underline{1.203} & 3.36 & 7.22 & 6.33\\
+\multicolumn{7}{l}{\textit{Machine learning}}\\
+\quad Ridge & 1.587 & \underline{0.755} & \underline{0.765} & 2.94 & 4.13 & 4.03\\
+\quad SVR & \underline{1.154} & \underline{0.932} & \underline{0.921} & 2.14 & 5.10 & 4.85\\
+\quad Random forest & \underline{1.016} & \underline{0.769$^{**}$} & \underline{0.744$^{***}$} & 1.88 & 4.21 & 3.92\\
+\quad GBM & \underline{0.983} & \underline{0.767$^{**}$} & \underline{0.742$^{**}$} & 1.82 & 4.20 & 3.90\\
+\quad XGBoost & 1.114 & \textbf{\underline{0.674$^{**}$}} & \textbf{\underline{0.711$^{***}$}} & 2.07 & 3.69 & 3.74\\
+\multicolumn{7}{l}{\textit{Hybrid}}\\
+\quad ARIMA--XGBoost & \underline{0.915} & \underline{0.727$^{**}$} & \underline{0.798} & 1.69 & 3.98 & 4.20\\
+\multicolumn{7}{l}{\textit{Deep learning}}\\
+\quad LSTM & \underline{1.100} & \underline{0.960} & \underline{0.948} & 2.04 & 5.26 & 4.99\\
+\quad GRU & \underline{0.868} & \underline{0.919} & \underline{0.932} & 1.61 & 5.03 & 4.91\\
+\quad CNN & \underline{1.009} & \underline{1.136} & \underline{1.117} & 1.87 & 6.22 & 5.88\\
+\quad CNN--LSTM & \underline{0.871} & \underline{1.064} & \underline{1.071} & 1.61 & 5.82 & 5.64\\
+\quad N-BEATS & \underline{1.415} & 1.093 & 1.069$^{*}$ & 2.62 & 5.98 & 5.63\\
+\bottomrule\end{tabular}
+\begin{minipage}{0.95\linewidth}\footnotesize\vspace{2pt} Notes: Relative RMSE is the ratio of each model’s RMSE to that of the random walk; values below one indicate improvement. Asterisks denote rejection of equal predictive accuracy against the random walk in a two-sided Diebold--Mariano test with the Harvey--Leybourne--Newbold small-sample correction ($^{*}$10\%, $^{**}$5\%, $^{***}$1\%). Underlined models belong to the 90\% Model Confidence Set (range statistic, block bootstrap, 2{,}000 replications). Bold marks the lowest RMSE in each evaluation window. Machine learning hyperparameters are selected on a rolling validation sample (see Section~\ref{sec:tuning}).\end{minipage}
+\end{table}

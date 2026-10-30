@@ -1,0 +1,48 @@
+{
+ "2023-09": {
+  "RIDGE": {
+   "alpha": 1
+  },
+  "SVR": {
+   "C": 10,
+   "epsilon": 0.01
+  },
+  "RF": {
+   "min_samples_leaf": 1,
+   "max_features": 0.3
+  },
+  "GBM": {
+   "max_depth": 2,
+   "learning_rate": 0.1,
+   "subsample": 0.8
+  },
+  "XGB": {
+   "max_depth": 5,
+   "learning_rate": 0.1,
+   "subsample": 1.0
+  }
+ },
+ "2024-09": {
+  "RIDGE": {
+   "alpha": 10
+  },
+  "SVR": {
+   "C": 1,
+   "epsilon": 0.01
+  },
+  "RF": {
+   "min_samples_leaf": 3,
+   "max_features": 0.3
+  },
+  "GBM": {
+   "max_depth": 3,
+   "learning_rate": 0.1,
+   "subsample": 0.8
+  },
+  "XGB": {
+   "max_depth": 3,
+   "learning_rate": 0.1,
+   "subsample": 1.0
+  }
+ }
+}

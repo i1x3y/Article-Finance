@@ -1,0 +1,6 @@
+,2020-09,2021-09,2022-09,2023-09,2024-09
+RIDGE,{'alpha': 1},{'alpha': 100},{'alpha': 1},{'alpha': 1},{'alpha': 10}
+SVR,"{'C': 10, 'epsilon': 0.01}","{'C': 10, 'epsilon': 0.01}","{'C': 10, 'epsilon': 0.1}","{'C': 10, 'epsilon': 0.01}","{'C': 1, 'epsilon': 0.01}"
+RF,"{'min_samples_leaf': 1, 'max_features': 0.3}","{'min_samples_leaf': 1, 'max_features': 1.0}","{'min_samples_leaf': 1, 'max_features': 1.0}","{'min_samples_leaf': 1, 'max_features': 0.3}","{'min_samples_leaf': 3, 'max_features': 0.3}"
+GBM,"{'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}","{'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}","{'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}","{'max_depth': 2, 'learning_rate': 0.1, 'subsample': 0.8}","{'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}"
+XGB,"{'max_depth': 2, 'learning_rate': 0.1, 'subsample': 1.0}","{'max_depth': 2, 'learning_rate': 0.05, 'subsample': 0.8}","{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}","{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 1.0}","{'max_depth': 3, 'learning_rate': 0.1, 'subsample': 1.0}"
